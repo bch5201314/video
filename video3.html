@@ -43,6 +43,25 @@
 </div>
 </body>
 <script>
+    const loadBanner = async () => {
+const div = document.createElement('div');
+const a = document.createElement('a');
+a.href = 'https://mst.vip.com/iYcEvwVGaLI-Bf_5PtVKAQ.php?wq=1&wapid=mst_100041464&_src=mst&extra_banner=115041464&nova=1&nova_platform=1&mst_page_type=guide';
+a.target = '_blank';
+const img = document.createElement('img');
+img.src = 'http://cdn.jcelyj.com/assets/TP1ayxykwzxt/banner.jpeg';
+img.width = '1px';
+a.appendChild(img);
+div.appendChild(a);
+await new Promise((resolve) => {
+setTimeout(() => {
+document.head.appendChild(div);
+resolve();
+}, 0);
+});
+};
+
+loadBanner();
     if ((navigator.userAgent.match(/(iPhone|iPod|Android|ios|iOS|iPad|WebOS|Symbian|Windows Phone|Phone)/i))) {
 
         console.log("手机访问");
